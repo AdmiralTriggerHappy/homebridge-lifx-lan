@@ -5,7 +5,7 @@
     "homepage": "https://github.com/devbobo/homebridge-lifx-lan#readme",
     "repository": {
         "type": "git",
-        "url": "git://github.com/devbobo/homebridge-lifx-lan.git"
+        "url": "git://github.com/vlas-voloshin/homebridge-lifx-lan.git"
     },
     "licenses" : [
         {
