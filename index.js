@@ -52,7 +52,7 @@ module.exports = function(homebridge) {
             format: Characteristic.Formats.UINT16,
             unit: 'K',
             maxValue: 9000,
-            minValue: 2500,
+            minValue: 1500,
             minStep: 250,
             perms: [Characteristic.Perms.READ, Characteristic.Perms.WRITE, Characteristic.Perms.NOTIFY]
         });
@@ -68,7 +68,7 @@ module.exports = function(homebridge) {
 
         this.setProps({
             format: Characteristic.Formats.UINT32,
-            maxValue: 400,
+            maxValue: 666,
             minValue: 112,
             minStep: 1,
             perms: [Characteristic.Perms.READ, Characteristic.Perms.WRITE, Characteristic.Perms.NOTIFY]
@@ -942,8 +942,8 @@ LifxAccessory.prototype.updateInfo = function() {
 
         if (this.accessory.context.features.color === false && service.testCharacteristic(ColorTemperature) === true) {
             service.getCharacteristic(ColorTemperature).setProps({
-                maxValue: 370,
-                minValue: 154
+                maxValue: 666,
+                minValue: 112
             });
         }
         return;
@@ -978,8 +978,8 @@ LifxAccessory.prototype.updateInfo = function() {
         }
         else if (service.testCharacteristic(ColorTemperature) === true) {
             service.getCharacteristic(ColorTemperature).setProps({
-                maxValue: 370,
-                minValue: 154
+                maxValue: 666,
+                minValue: 112
             });
         }
     }.bind(this));
