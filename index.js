@@ -280,12 +280,7 @@ LifxLanPlatform.prototype.configurationRequestHandler = function(context, reques
                 services = [Service.LightSensor];
             }
 
-            if (context.accessory.context.features.color === true) {
-                characteristics = [Characteristic.Brightness, ColorTemperature, Characteristic.Hue, Characteristic.Saturation];
-            }
-            else {
-                characteristics = [Characteristic.Brightness, ColorTemperature];
-            }
+            characteristics = [Characteristic.Brightness, ColorTemperature, Characteristic.Hue, Characteristic.Saturation];
 
             for (var index in characteristics) {
                 var characteristic = characteristics[index];
